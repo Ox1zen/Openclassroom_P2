@@ -71,7 +71,7 @@ body
         border-bottom-left-radius: 7px;
         border-top-left-radius: 7px;
     }
-    .fa-solid /* icone du point localisation de la barre de recherche */
+    .fa-location-dot /* icone du point localisation de la barre de recherche */
     {
         padding-left: 10px;
         padding-top: 7px;
@@ -101,6 +101,16 @@ body
     .search_button:hover
     {
         background-color: #DEEBFF;
+    }
+    .fa-info /* l'icon petit i pour "info"*/
+    {
+        position: relative;
+        left: -650px;
+        top: 35px;
+    }
+    .search_result_numbers
+    {
+        left: 40px;
     }
 
    /*--- Menu et liste des filtres---*/
