@@ -60,18 +60,18 @@ body
     /* ------------MAIN---------------------------- */
     .locationpin_icon /* La section de l'icone en fond gris */
     {
-        position: fixed;
+        position: relative;
         background-color: #F2F2F2;
         width: 30px;
-        height: 32px;
-        top: 174px;
+        height: 29px;
+        top: -50px;
         left: 25px;
         border-bottom-left-radius: 7px;
         border-top-left-radius: 7px;
     }
     .fa-solid /* icone du point localisation de la barre de recherche */
     {
-        padding-left: 7px;
+        padding-left: 10px;
         padding-top: 7px;
     }
     #searchbar /* La barre de recherche */
