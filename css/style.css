@@ -18,7 +18,7 @@ body
 /* Paramètres selon l'écran */
 @media screen and (min-width: 992px) /* Desktop */
 {
-    /* ------------HEADER---------------------------- */
+    /*---------------[HEADER]---------------*/
     #header_container /*nav mise en place du menu nav en haut a droite*/
     {
         /* position:absolute; */
@@ -57,7 +57,9 @@ body
         margin-left: 15px;
         top: -15px;
     }
-    /* ------------MAIN---------------------------- */
+    /*---------------[MAIN]---------------*/
+
+    /*---Barre de recherche---*/
     .locationpin_icon /* La section de l'icone en fond gris */
     {
         position: relative;
@@ -100,10 +102,19 @@ body
     {
         background-color: #DEEBFF;
     }
+
+   /*--- Menu et liste des filtres---*/
     .menu_filter
     {
-        display: flex;
+        position: relative;
+        display: inline-flex;
         list-style: none;
+        top: -65px;
+        left: 90px;
+    }
+    .menu_filter li
+    {
+        margin-right: 80px;
     }
     .filters
     {
@@ -132,7 +143,7 @@ body
         width: 100%;
         height: 600px;
     }
-    /* ------------FOOTER---------------------------- */
+    /*---------------[FOOTER]---------------*/
     .menu_footer
     {
         /* width: 100%; */
