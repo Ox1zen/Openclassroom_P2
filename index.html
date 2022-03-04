@@ -26,68 +26,128 @@
         </section>
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
-    </header>
-    
-    <main>
-        <input type="search" name="" id="searchbar" placeholder="Marseille, france">
-        <button class="search_button">Rechercher</button>
-        <section class="locationpin_icon">
-        <i class="fa-solid fa-location-dot"></i>
-        </section>
-        <p>Filtres</p>
-        <ul class="menu_filter">
-            <li><a href="#">Économique</a></li>
-            <li><a href="#">Familial</a></li>
-            <li><a href="#">Romantique</a></li>
-            <li><a href="#">Romantique</a></li>
+        </header>
+        
+        <main>
+            <input type="search" name="" id="searchbar" placeholder="Marseille, france">
+            <button class="search_button">Rechercher</button>
+            <section class="locationpin_icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </section>
+            <p>Filtres</p>
+            <ul class="menu_filter">
+                <li>
+                    <button class="filter_style">Économique</button>
+                    <section class="economic_icon"><i class="fa-solid fa-money-bill-wave"></i></section>
+                </li>
+                <li>
+                    <button class="filter_style">Familial</button>
+                    <section class="family_icon"><i class="fa-solid fa-child"></i></section>
+                </li>
+                <li>
+                    <button class="filter_style">Romantique</button>
+                    <section class="romantic_icon"><i class="fa-solid fa-heart"></i></section>
+                </li>
+                <li>
+                    <button class="filter_style">Animaux autorisés</button>
+                    <section class="animals_icon"><i class="fa-solid fa-dog"></i></section>
+            </li>
         </ul>
-        <i class="fa-solid fa-info"></i>
-        <p class="search_result_numbers">Plus de 500 logements son disponibles dans cette ville</p>
+        <p class="search_result_numbers">Plus de 500 logements sont disponibles dans cette ville</p>
+        <section class="fa-info_circle">
+            <i class="fa-solid fa-info"></i>
+        </section>
         <section class="filters">
             <section class="filter_hebergement_marseille">
                 <h2>Hébergements à Marseille</h2>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <section class="preview_list">
+                    <button class="preview">
+                        <img src="./assets/images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="" class="preview_image">
+                        <h3>Auberge La cannebière</h3>
+                        <p>Nuit à partir de 25€</p>
+                    </button>
+                    <button class="preview">
+                        <img src="./assets/images/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="" class="preview_image">
+                        <h3>Hôtel du port</h3>
+                        <p>Nuit à partir de 52€</p>
+                    </button>
+                    <button class="preview">
+                        <img src="./assets/images/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="" class="preview_image">
+                        <h3>Hôtel les mouettes</h3>
+                        <p>Nuit à partir de 76€</p>
+                    </button>
+                    <button class="preview">
+                        <img src="./assets/images/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="" class="preview_image">
+                        <h3>Hôtel de la mer</h3>
+                        <p>Nuit à partir de 46€</p>
+                    </button>
+                    <button class="preview">
+                        <img src="./assets/images/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="" class="preview_image">
+                        <h3>Auberge Le Panier</h3>
+                        <p>Nuit à partir de 23€</p>
+                    </button>
+                    <button class="preview">
+                        <img src="./assets/images/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="" class="preview_image">
+                        <h3>Hôtel chez Amina</h3>
+                        <p>Nuit à partir de 96€</p>
+                    </button>
+                </section>
             </section>
             <section class="filter_most_popular">
                 <h2>Les plus populaires</h2>
-                <div></div>
-                <div></div>
-                <div></div>
+                <section class="preview_popular_list">
+                    <button class="preview_popular">
+                        <img src="./assets/images/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="" class="preview_popular_image">
+                        <h3>Hôtel Le soleil du matin</h3>
+                        <p>Nuit à partir de 128€</p>
+                    </button>
+                    <button class="preview_popular">
+                        <img src="./assets/images/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="" class="preview_popular_image">
+                        <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                        <p>Nuit à partir de 71€</p>
+                    </button>
+                    <button class="preview_popular">
+                        <img src="./assets/images/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="" class="preview_popular_image">
+                        <h3>Hôtel Tout bleu et Blanc</h3>
+                        <p>Nuit à partir de 68€</p>
+                    </button>
+                </section>
             </section>
 
             
         </section>
         <section class="filter_marseille_activity">
                 <h2>Activités à Marseille</h2>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <section class="preview_marseille_activity">
+                    <button class="preview_marseille_activity_long"></button>
+                    <section>
+                        <button class="preview_marseille_activity_short"></button>
+                        <button class="preview_marseille_activity_short"></button>
+                    </section>
+                    <button class="preview_marseille_activity_long"></button>
+                    <section>
+                        <button class="preview_marseille_activity_short"></button>
+                        <button class="preview_marseille_activity_short"></button>
+                    </section>
+                </section>
         </section>
     </main>
     
     <footer>
         <div class="menu_footer">
             <ul class="menu_footer_1">
-                <li><a href="#">A propos</a></li>
+                <li ><a href="#" class="menu_footer_bold">A propos</a></li>
                 <li><a href="#">Fonctionnement du site</a></li>
                 <li><a href="#">Conditions générales de vente</a></li>
                 <li><a href="#">Données et confidentialité</a></li>
             </ul>
             <ul class="menu_footer_2">
-                <li><a href="#">Nos hébergements</a></li>
+                <li><a href="#" class="menu_footer_bold">Nos hébergements</a></li>
                 <li><a href="#">Charte qualité</a></li>
                 <li><a href="#">Soumettre votre hôtel</a></li>
             </ul>
             <ul class="menu_footer_3">
-                <li><a href="#">Assistance</a></li>
+                <li><a href="#" class="menu_footer_bold">Assistance</a></li>
                 <li><a href="#">Centre d'aide</a></li>
                 <li><a href="#">Nous contacter</a></li>
             </ul>

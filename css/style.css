@@ -102,11 +102,21 @@ body
     {
         background-color: #DEEBFF;
     }
-    .fa-info /* l'icon petit i pour "info"*/
+    .fa-info_circle /* cercle autour de l'icone i pour "info" */
     {
         position: relative;
-        left: -650px;
-        top: 35px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid grey;
+        border-radius: 60px;
+        left: 15px;
+        top: -57px;
+    }
+    .fa-info /* l'icon petit i pour "info"*/
+    {
+        color: #0065FC;
+        padding-left: 11px;
+        padding-top: 5px;
     }
     .search_result_numbers
     {
@@ -119,29 +129,114 @@ body
         position: relative;
         display: inline-flex;
         list-style: none;
-        top: -65px;
-        left: 90px;
+        top: -75px;
+        left: 60px;
     }
     .menu_filter li
     {
-        margin-right: 80px;
+        margin-right: 60px;
     }
     .filters
     {
         display: flex;
         /* flex-wrap: nowrap; */
     }
+    .filter_style
+    {
+        width: 200px;
+        height: 40px;
+        border: 2px solid grey;
+        background-color: white;
+        border-radius: 50px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    /* Icone pour le filtre économique */
+    .economic_icon
+    {
+        position: relative;
+        left: 0px;
+        top: -40px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: #DEEBFF;
+    }
+    .fa-money-bill-wave
+    {
+        color: #0065FC;
+        padding-left: 12px;
+        padding-top: 12px;
+    }
+    /* Icone pour le filtre Familial */
+    .family_icon
+    {
+        position: relative;
+        left: 0px;
+        top: -40px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: #DEEBFF;
+    }
+    .fa-child
+    {
+        color: #0065FC;
+        padding-left: 12px;
+        padding-top: 12px;
+    }
+    /* Icone pour le filtre romantique */
+    .romantic_icon
+    {
+        position: relative;
+        left: 0px;
+        top: -40px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: #DEEBFF;
+    }
+    .fa-heart
+    {
+        color: #0065FC;
+        padding-left: 12px;
+        padding-top: 12px;
+    }
+
+    /* Icone pour le filtre animaux autorisées */
+    .animals_icon
+    {
+        position: relative;
+        left: 0px;
+        top: -40px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: #DEEBFF;
+    }
+    .fa-dog
+    {
+        color: #0065FC;
+        padding-left: 12px;
+        padding-top: 12px;
+    }
+    /*---Sections des résultats---*/
     .filter_hebergement_marseille
     {
-        width: 600px;
+        width: 850px;
         height: 600px;
         margin-left: 25px;
         background-color: #F2F2F2;
         border-radius: 15px;
     }
+    .filters h2
+    {
+        margin-left: 25px;
+        margin-top: 35px;
+    }
     .filter_most_popular
     {
-        width: 300px;
+        width: 400px;
         height: 600px;
         margin-left: 25px;
         background-color: #F2F2F2;
@@ -153,16 +248,134 @@ body
         width: 100%;
         height: 600px;
     }
+
+    /* Partie Hebergement a marseil */
+    .preview_list
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .preview
+    {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+    .preview h3
+    {
+        font-size: 14px;
+        text-align: left;
+    }
+    .preview p
+    {
+        font-size: 12px;
+        left: -45px;
+        top: -10px;
+    }
+    .preview_image
+    {
+        position: relative;
+        width: 190px;
+        height: 110px;
+        /* top: 0px; */
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    /* Partie Les plus populaires */
+    .preview_popular_list
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .preview_popular
+    {
+        width: 350px;
+        height: 150px;
+        background-color: white;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .preview_popular h3
+    {
+        position: relative;
+        font-size: 14px;
+        top: -145px;
+        left: 50px;
+    }
+    .preview_popular p
+    {
+        position: relative;
+        font-size: 12px;
+        top: -150px;
+        left: 30px;
+    }
+    .preview_popular_image
+    {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        left: -100px;
+        top: 2px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    /* Partie Activités à Marseille */
+    .filter_marseille_activity h2
+    {
+        margin-left: 45px;
+    }
+    .preview_marseille_activity
+    {
+        display: flex;
+    }
+    .preview_marseille_activity_long
+    {
+        width: 300px;
+        height: 500px;
+        border-radius: 15px;
+    }
+    .preview_marseille_activity_short
+    {
+        width: 300px;
+        height: 200px;
+        border-radius: 15px;
+    }
+
+
     /*---------------[FOOTER]---------------*/
     .menu_footer
     {
-        /* width: 100%; */
+        width: 100%;
         height: 300px;
         background-color: #F2F2F2;
         display: flex;
         /* flex-direction: column; */
         margin-top: 30px;
+        padding-left: 50px;
     }
+    .menu_footer ul li
+    {
+        list-style: none;
+        margin-top: 20px;
+        margin-right: 400px;
+    }
+    .menu_footer ul li a
+    {
+        text-decoration: none;
+        color: black;
+    }
+    .menu_footer_bold
+    {
+        font-weight: bold;
+    }
+
 }
 @media screen and (min-width: 768px) /* Tablettes */
 {
