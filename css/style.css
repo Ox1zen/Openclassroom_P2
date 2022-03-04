@@ -282,7 +282,7 @@ body
         position: relative;
         width: 190px;
         height: 110px;
-        /* top: 0px; */
+        top: -3px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
@@ -334,18 +334,60 @@ body
     .preview_marseille_activity
     {
         display: flex;
+        flex-wrap:wrap;
     }
     .preview_marseille_activity_long
     {
         width: 300px;
-        height: 500px;
+        height: 450px;
         border-radius: 15px;
+        margin-left: 25px;
+        background-color: white;
+    }
+    .preview_marseille_activity_long h3
+    {
+        position: relative;
+        top: -15px;
     }
     .preview_marseille_activity_short
     {
         width: 300px;
         height: 200px;
+        background-color: white;
         border-radius: 15px;
+        margin-bottom: 50px;
+        margin-right: 25px;
+        margin-left: 50px;
+    }
+    .preview_marseille_activity_short h3
+    {
+        position: relative;
+        top: -15px;
+    }
+    .preview_marseille_short_column
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .preview_marseille_image
+    {
+        position: relative;
+        height: 400px;
+        width: 297px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        left: -5px;
+        top: -5px;
+    }
+    .preview_marseille_image_short
+    {
+        position: relative;
+        width: 297px;
+        height: 150px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        left: -5px;
+        top: -5px;
     }
 
 
@@ -355,10 +397,13 @@ body
         width: 100%;
         height: 300px;
         background-color: #F2F2F2;
-        display: flex;
-        /* flex-direction: column; */
         margin-top: 30px;
         padding-left: 50px;
+    }
+    .footer_unordered_list
+    {
+        display: flex;
+        flex-wrap: wrap;
     }
     .menu_footer ul li
     {
