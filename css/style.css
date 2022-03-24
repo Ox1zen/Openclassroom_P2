@@ -13,17 +13,30 @@
 body
 {
     font-family: 'Raleway';
-}
+    height: 100%;
+}    
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}                            
 
 /* Paramètres selon l'écran */
-@media screen and (min-width: 992px) /* Desktop */
+@media (min-width: 768px) /* Bureau */ 
 {
-    /*---------------[HEADER]---------------*/
-    #header_container /*nav mise en place du menu nav en haut a droite*/
+    /* ------------HEADER---------------------------- */
+    #header_container
     {
-        /* position:absolute; */
-        right: 50px;
-        top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #header_container nav
+    {
+        margin-top: 11px;
+        margin-right: 20px;
     }
     #Booki_Logo /* mise en place du logo en haut a gauche*/
     {
@@ -50,6 +63,7 @@ body
     h1
     {
         margin-left: 10px;
+
     }
     p
     {
@@ -57,46 +71,558 @@ body
         margin-left: 15px;
         top: -15px;
     }
-    /*---------------[MAIN]---------------*/
+        /*---------------[MAIN]---------------*/
+
+/*---Barre de recherche---*/
+.locationpin_icon /* La section de l'icone en fond gris */
+{
+    position: relative;
+    background-color: #F2F2F2;
+    width: 30px;
+    height: 49px;
+    top: -70px;
+    left: 25px;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+.fa-location-dot /* icone du point localisation de la barre de recherche */
+{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+#searchbar /* La barre de recherche */
+{
+    position: relative;
+    top: -20px;
+    left: 50px;
+    height: 50px;
+    border: 2px solid;
+    border-color: #F2F2F2;
+}
+.search_button_mobile
+{
+    display: none;
+}
+.search_button /* Le bouton de recherche */
+{
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #0065FC;
+    position: relative;
+    top: -20px;
+    left: 45px;
+    height: 50px;
+    border:0px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.search_button:hover
+{
+    background-color: #DEEBFF;
+}
+main p 
+{
+    top: -28px;
+    left: 5px;
+}
+.fa-info_circle /* cercle autour de l'icone i pour "info" */
+{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border: 1px solid grey;
+    border-radius: 60px;
+    left: 15px;
+    top: -130px;
+}
+.fa-info /* l'icon petit i pour "info"*/
+{
+    color: #0065FC;
+    padding-left: 11px;
+    padding-top: 5px;
+}
+.search_result_numbers
+{
+    left: 40px;
+    top: -90px;
+}
+
+/*--- Menu et liste des filtres---*/
+.menu_filter
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    top: -75px;
+    left: 60px;
+}
+.menu_filter li
+{
+    margin-right: 60px;
+}
+.filters
+{
+    display: flex;
+}
+.filter_style
+    {
+        width: 200px;
+        height: 40px;
+        border: 2px solid grey;
+        background-color: white;
+        border-radius: 50px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+.filter_style:hover
+    {
+        background-color: var(--brand-blue);
+    }
+.filter_style:active
+    {
+        background-color: var(--brand-lightblue);
+    }
+/* Icone pour le filtre économique */
+.economic_icon
+{
+    position: relative;
+    left: 0px;
+    top: -40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #DEEBFF;
+}
+.fa-money-bill-wave
+{
+    color: #0065FC;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+/* Icone pour le filtre Familial */
+.family_icon
+{
+    position: relative;
+    left: 0px;
+    top: -40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #DEEBFF;
+}
+.fa-child
+{
+    color: #0065FC;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+/* Icone pour le filtre romantique */
+.romantic_icon
+{
+    position: relative;
+    left: 0px;
+    top: -40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #DEEBFF;
+}
+.fa-heart
+{
+    color: #0065FC;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+/* Icone pour le filtre animaux autorisées */
+.animals_icon
+{
+    position: relative;
+    left: 0px;
+    top: -40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #DEEBFF;
+}
+.fa-dog
+{
+    color: #0065FC;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+.filters
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: -105px;
+}
+/*---Sections des résultats---*/
+.filter_hebergement_marseille
+{
+    width: 950px;
+    height: 600px;
+    margin-left: 25px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.filters h2
+{
+    margin-left: 25px;
+    margin-top: 35px;
+}
+.filter_most_popular
+{
+    width: 400px;
+    height: 600px;
+    margin-left: 25px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    margin-top: 0px;
+}
+.filter_marseille_activity
+{
+    position: relative;
+    overflow-y: auto;
+    width: 100%;
+    height: 600px;
+}
+
+/* Partie Hebergement a marseil */
+.preview_list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.preview
+{
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px grey;
+
+}
+.preview h3
+{
+    font-size: 16px;
+    font-weight: bold;
+    /* text-align: center; */
+    padding-left: 20px;
+}
+.preview p
+{
+    font-size: 12px;
+    top: -10px;
+}
+.preview_image
+{
+    position: relative;
+    width: 239px;
+    height: 110px;
+    top: 5px;
+    left: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+}
+.show_more_marseille_host
+{
+    top: -1px;
+    left: 40px;
+    font-weight: 700;
+}
+.stars
+{
+    position: relative;
+    top: -14px;
+    left: 20px;
+    color: #0065FC;
+}
+.stargrey
+{
+    color: grey;
+}
+/* Partie Les plus populaires */
+.stars_popular
+{
+    position: relative;
+    color: #0065FC;
+    top: -110px;
+    left: 160px;
+}
+.preview_popular_list
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fa-arrow-trend-up
+{
+    color: black;
+    position: relative;
+    top: -42px;
+    right: -350px;
+    
+}
+.preview_popular
+{
+    width: 350px;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: 0px 0px 5px grey;
+}
+.preview_popular h3
+{
+    position: relative;
+    font-size: 14px;
+    margin-right: 200px;
+    top: -140px;
+    left: 175px;
+}
+.preview_popular p
+{
+    position: relative;
+    font-size: 12px;
+    top: -145px;
+    left: 160px;
+}
+.preview_popular_image
+{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    left: 5px;
+    top: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    object-fit: cover;
+}
+/* Partie Activités à Marseille */
+.filter_marseille_activity
+{
+    left: 15px;
+    align-items: center;
+}
+.filter_marseille_activity h2
+{
+    margin-left: 45px;
+}
+.preview_marseille_activity
+{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+.preview_marseille_activity_long
+{
+    width: 300px;
+    height: 450px;
+    border-radius: 15px;
+    margin-left: 25px;
+    background-color: white;
+    box-shadow: 0px 0px 5px grey;
+}
+.preview_marseille_activity_long h3
+{
+    position: relative;
+    top: -12px;
+    left: 20px;
+}
+.preview_marseille_activity_short
+{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    margin-right: 25px;
+    margin-left: 50px;
+    box-shadow: 0px 0px 5px grey;
+}
+.preview_marseille_activity_short h3
+{
+    position: relative;
+    top: -12px;
+    left: 20px;
+}
+.preview_marseille_short_column
+{
+    display: flex;
+    flex-direction: column;
+}
+.preview_marseille_image
+{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    top: -5px;
+    object-fit: cover;
+}
+.preview_marseille_image_short
+{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    top: -5px;
+    object-fit: cover;
+}
+
+
+/*---------------[FOOTER]---------------*/
+.menu_footer
+{
+    /* position: absolute; */
+    /* width: 100%; */
+    /* height: 300px; */
+    background-color: #F2F2F2;
+    margin-top: 30px;
+    padding-left: 50px;
+}
+.footer_unordered_list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.menu_footer ul li
+{
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    /* margin-right: 200px; */
+}
+.menu_footer ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.menu_footer_bold
+{
+    font-weight: bold;
+}
+
+
+}
+
+@media  (max-width: 767px)  /* Smartphones */
+{
+    /* ------------HEADER---------------------------- */
+    #Booki_Logo
+    {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+    #header_container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    ul
+    {
+        padding: 0;
+    }
+    #header_container nav li
+    {
+        list-style: none;
+        display: inline-flex;
+        width: calc(98%/2);
+        justify-content: center;
+        border-bottom: 3px solid #F2F2F2;
+    }
+    #header_container nav li a
+    {
+        padding-bottom: 10px;
+        text-decoration: none;
+        color: black;
+    }
+    #header_container nav li:hover
+    {
+        color: var(--brand-blue);
+        border-bottom: 3px solid #0065FC;
+    }
+    h1
+    {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    p
+    {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+
+
+
+            /*---------------[MAIN]---------------*/
 
     /*---Barre de recherche---*/
     .locationpin_icon /* La section de l'icone en fond gris */
     {
         position: relative;
         background-color: #F2F2F2;
-        width: 30px;
-        height: 29px;
-        top: -50px;
+        width: 50px;
+        height: 49px;
+        top: -70px;
         left: 25px;
-        border-bottom-left-radius: 7px;
-        border-top-left-radius: 7px;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
     }
     .fa-location-dot /* icone du point localisation de la barre de recherche */
     {
-        padding-left: 10px;
-        padding-top: 7px;
+        padding-left: 20px;
+        padding-top: 15px;
     }
     #searchbar /* La barre de recherche */
     {
         position: relative;
+        width: 200px;
         top: -20px;
-        left: 50px;
-        height: 30px;
+        left: 75px;
+        height: 50px;
         border: 2px solid;
         border-color: #F2F2F2;
     }
-    .search_button /* Le bouton de recherche */
+    .search_zone
     {
-        color: white;
-        font-size: 15px;
-        background-color: #0065FC;
+        padding-top: 25px;
+        margin-bottom: -60px;
+    }
+    .search_button
+    {
+        display: none;
+    }
+    .search_button_mobile /* Le bouton de recherche */
+    {
         position: relative;
+        color: white;
+        background-color: #0065FC;
+        font-size: 15px;
+        width: 50px;
         top: -20px;
-        left: 45px;
-        height: 30px;
+        left: 60px;
+        height: 50px;
         border:0px;
-        border-top-right-radius: 7px;
-        border-bottom-right-radius: 7px;
+        border-radius: 15px;
     }
     .search_button:hover
     {
@@ -118,19 +644,23 @@ body
         padding-left: 11px;
         padding-top: 5px;
     }
-    .search_result_numbers
-    {
-        left: 40px;
-    }
 
-   /*--- Menu et liste des filtres---*/
+
+
+
+
+
+    /*--- Menu et liste des filtres---*/
     .menu_filter
     {
         position: relative;
-        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
         list-style: none;
-        top: -75px;
-        left: 60px;
+        top: -55px;
+        left: 80px;
     }
     .menu_filter li
     {
@@ -139,18 +669,17 @@ body
     .filters
     {
         display: flex;
-        /* flex-wrap: nowrap; */
     }
     .filter_style
-    {
-        width: 200px;
-        height: 40px;
-        border: 2px solid grey;
-        background-color: white;
-        border-radius: 50px;
-        padding-left: 10px;
-        padding-top: 5px;
-    }
+        {
+            width: 200px;
+            height: 40px;
+            border: 2px solid grey;
+            background-color: white;
+            border-radius: 50px;
+            padding-left: 10px;
+            padding-top: 5px;
+        }
     /* Icone pour le filtre économique */
     .economic_icon
     {
@@ -220,184 +749,198 @@ body
         padding-left: 12px;
         padding-top: 12px;
     }
-    /*---Sections des résultats---*/
+    .search_result_numbers
+    {
+        position: relative;
+        top: -5px;
+        font-size: 16px;
+        margin-left: 60px;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    .filters
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
     .filter_hebergement_marseille
     {
-        width: 850px;
-        height: 600px;
-        margin-left: 25px;
-        background-color: #F2F2F2;
-        border-radius: 15px;
+        order: 2;
     }
-    .filters h2
+    .filter_hebergement_marseille h2
     {
-        margin-left: 25px;
-        margin-top: 35px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        left: -40px;
+        margin-top: 50px;
+        margin-bottom: 30px;
     }
     .filter_most_popular
     {
-        width: 400px;
-        height: 600px;
-        margin-left: 25px;
         background-color: #F2F2F2;
-        border-radius: 15px;
     }
-    .filter_marseille_activity
+    .filter_marseille_activity h2
     {
         position: relative;
-        width: 100%;
-        height: 600px;
-    }
-
-    /* Partie Hebergement a marseil */
-    .preview_list
-    {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+        left: -80px;
+
     }
-    .preview
+    .preview /* paramètres des cadres de resultats hébergements à marseille */
     {
-        width: 200px;
+        border-radius: 25px;
         height: 200px;
+        width: 378px;
+        box-shadow: 1px 1px 12px #555;
         background-color: white;
-        border-radius: 20px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        margin-left: 50px;
-        margin-right: 20px;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .preview_image /* Taille des images */
+    {
+        position: relative;
+        left: 5px;
+        top: 5px;
+        width: 368px;
+        height: 100px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
     }
     .preview h3
     {
-        font-size: 14px;
-        text-align: left;
+        position: relative;
+        left: 20px;
+        top: -8px;
     }
     .preview p
     {
-        font-size: 12px;
-        left: -45px;
-        top: -10px;
+        position: relative;
+        font-size: 14px;
+        top: -20px;
+        left: 10px;
     }
-    .preview_image
+    .preview_marseille_activity_short, .preview_marseille_activity_long /* paramètres des cadres de resultats activité à marseille */
+    {
+        width: 378px;
+        border-radius: 25px;
+        height: 195px;
+        box-shadow: 1px 1px 12px #555;
+        background-color: white;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .preview_marseille_activity_short h3, .preview_marseille_activity_long h3
+    {
+        margin-left: 20px;
+    }
+    .preview_marseille_image, .preview_marseille_image_short
     {
         position: relative;
-        width: 190px;
-        height: 110px;
-        top: -3px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        top: -5px;
+        width: 378px;
+        height: 125px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        object-fit: cover;
     }
-    /* Partie Les plus populaires */
-    .preview_popular_list
+
+    /* les plus populaires */
+    .show_more_marseille_host
     {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        font-weight: 700;
+        left: -140px;
+        top: 10px;
+        margin-bottom: 30px;
+    }
+    .most_popular_title
+    {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 20px;
+        left: -70px;
+    }
+    .fa-arrow-trend-up
+    {
+        color: black;
+        position: relative;
+        top: 25px;
+        left: 130px;
+    }
+    .stars_popular
+    {
+        position: relative;
+        color: #0065FC;
+        left: 185px;
+        top: -110px;
+
+    }
+    .stars
+    {
+        position: relative;
+        color: #0065FC;
+        top: -20px;
+        left: 20px;
+    }
+    .stargrey
+    {
+        color: grey;
     }
     .preview_popular
     {
-        width: 350px;
-        height: 150px;
+        width: 378px;
+        height: 160px;
+        border-radius: 25px;
+        box-shadow: 1px 1px 12px #555;
         background-color: white;
-        border-radius: 20px;
-        margin-bottom: 20px;
-        margin-left: 25px;
-        margin-right: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
     }
     .preview_popular h3
     {
         position: relative;
-        font-size: 14px;
-        top: -145px;
-        left: 50px;
+        left: 190px;
+        top: -150px;
+        font-size: small;
+        font-weight: bolder;
+        margin-right: 240px;
     }
     .preview_popular p
     {
         position: relative;
-        font-size: 12px;
+        font-size: 13px;
+        left: 180px;
         top: -150px;
-        left: 30px;
     }
     .preview_popular_image
     {
         position: relative;
-        width: 140px;
-        height: 140px;
-        left: -100px;
-        top: 2px;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-    }
-    /* Partie Activités à Marseille */
-    .filter_marseille_activity h2
-    {
-        margin-left: 45px;
-    }
-    .preview_marseille_activity
-    {
-        display: flex;
-        flex-wrap:wrap;
-    }
-    .preview_marseille_activity_long
-    {
-        width: 300px;
-        height: 450px;
-        border-radius: 15px;
-        margin-left: 25px;
-        background-color: white;
-    }
-    .preview_marseille_activity_long h3
-    {
-        position: relative;
-        top: -15px;
-    }
-    .preview_marseille_activity_short
-    {
-        width: 300px;
-        height: 200px;
-        background-color: white;
-        border-radius: 15px;
-        margin-bottom: 50px;
-        margin-right: 25px;
-        margin-left: 50px;
-    }
-    .preview_marseille_activity_short h3
-    {
-        position: relative;
-        top: -15px;
-    }
-    .preview_marseille_short_column
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    .preview_marseille_image
-    {
-        position: relative;
-        height: 400px;
-        width: 297px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        left: -5px;
-        top: -5px;
-    }
-    .preview_marseille_image_short
-    {
-        position: relative;
-        width: 297px;
+        left: 7px;
+        top: 5px;
+        width: 150px;
         height: 150px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        left: -5px;
-        top: -5px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
     }
 
-
-    /*---------------[FOOTER]---------------*/
+        /*---------------[FOOTER]---------------*/
     .menu_footer
     {
         width: 100%;
-        height: 300px;
+        height: 650px;
         background-color: #F2F2F2;
-        margin-top: 30px;
+        margin-top: 15px;
         padding-left: 50px;
     }
     .footer_unordered_list
@@ -419,99 +962,5 @@ body
     .menu_footer_bold
     {
         font-weight: bold;
-    }
-
-}
-@media screen and (min-width: 768px) /* Tablettes */
-{
-    /* ------------HEADER---------------------------- */
-    #header_container nav
-    {
-        position:absolute;
-        right: 50px;
-        top: 10px;
-    }
-    #Booki_Logo
-    {
-        margin-top: 30px;
-        margin-left: 40px;
-    }
-    #header_container nav li
-    {
-        list-style: none;
-        display: inline;
-        margin-left: 50px;
-    }
-    #header_container nav li a
-    {
-        text-decoration: none;
-        color: black;
-    }
-    #header_container nav li a:hover
-    {
-        color: var(--brand-blue);
-        border-top: 3px solid #0065FC;
-        padding-top: 24px;
-    }
-    h1
-    {
-        margin-left: 10px;
-
-    }
-    p
-    {
-        position: relative;
-        margin-left: 15px;
-        top: -15px;
-    }
-    
-}
-@media screen and (max-width: 767px)  /* Smartphones */
-{
-    /* ------------HEADER---------------------------- */
-    #Booki_Logo
-    {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-    }
-    #header_container
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    #header_container nav li
-    {
-        list-style: none;
-        display: inline;
-        border-bottom: 3px solid #F2F2F2;
-    }
-    #header_container nav li a
-    {
-        text-decoration: none;
-        color: black;
-        padding-left: calc(25% / 2); /*Petit soucis pour centré le milieux en fonction de l'écran*/
-        padding-right: calc(25% / 2);
-    }
-    #header_container nav li a:active,a:hover
-    {
-        color: var(--brand-blue);
-        border-bottom: 3px solid #0065FC;
-    }
-    h1
-    {
-        font-size:x-large;
-        margin-left: 15px;
-        margin-right: 20px;
-    }
-    p
-    {
-        font-size: larger;
-        margin-left: 15px;
-        margin-right: 20px;
-    }
-    ul
-    {
-        padding-left: 0;
     }
 }
