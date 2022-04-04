@@ -386,17 +386,23 @@ main p
 .filter_marseille_activity h2
 {
     display: flex;
-    justify-content:space-between;
     position: relative;
-    left: 50px;
+    left: 190px;
 }
 .preview_marseille_activity_list
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .preview_marseille_activity
+{
+    display: flex;
+    width: calc(99%/2);
+    margin-left: 6.5px;
+    justify-content: space-evenly;
+}
+.preview_marseille_activity a
 {
     display: flex;
 }
@@ -472,7 +478,7 @@ main p
 {
     background-color: #F2F2F2;
     margin-top: 30px;
-    padding-left: 50px;
+    padding-left: 95px;
 }
 .footer_unordered_list
 {
