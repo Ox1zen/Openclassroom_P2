@@ -234,13 +234,14 @@ main p
 /*---Sections des résultats---*/
 .filter_hebergement_marseille
 {
-    width: calc(110%/2);
+    width: 500px;
     height: 600px;
     padding-left: 25px;
     padding-right: 25px;
     background-color: #F2F2F2;
     border-radius: 15px;
     margin-bottom: 15px;
+    margin-left: -16px;
     overflow-y: auto;
     overflow-x: hidden;
 }
