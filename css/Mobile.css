@@ -1,14 +1,17 @@
     /* ------------HEADER---------------------------- */
+
+    /* Paramètres d'emplacement du logo */
     #Booki_Logo
     {
+        margin-left: 45%;
+        margin-right: 45%;
         margin-top: 20px;
-    }
+        margin-bottom: 20px;
 
-    header 
-    {
-        display: flex;
-        flex-direction: column;
     }
+    /* Mise en place du menu en flex afin qu'ils
+    soient sur la même ligne, puis centrer le texte
+    puis stylisation */
     .menu ul
     {
         display: flex;
@@ -23,81 +26,98 @@
         list-style: none;
         width: 100% ;
         border-bottom: 3px solid #F2F2F2;
-        padding-bottom: 10px;
+        padding-bottom: 12px;
     }
     #header_container nav li a
     {
         text-decoration: none;
         color: black;
+        font-weight: 500;
     }
     #header_container nav li:hover
     {
         color: var(--brand-blue);
         border-bottom: 3px solid #0065FC;
     }
+    #header_container nav li a:hover
+    {
+        color: var(--brand-blue)
+    }
+    /* Mise en forme du titre ainsi que du texte
+    juste en dessous du menu du site */
     h1
     {
+        padding-top: 10px;
         font-size: 24px;
         font-weight: bold;
-        margin-left: 10px;
+        margin-left: 8%;
+        margin-right: 8%;
     }
     p
     {
-        margin-left: 10px;
-        font-size: 20px;
+        margin-left: 8%;
+        font-size: 17.5px;
+        top: -15px;
+        margin-bottom: 40px;
     }
 
 
 
-
-            /*---------------[MAIN]---------------*/
+    /*---------------[MAIN]---------------*/
 
     /*---Barre de recherche---*/
-    .locationpin_icon /* La section de l'icone en fond gris */
+    
+    /* Le fond de l'icone "point de localisation" */
+    .locationpin_icon 
     {
         position: relative;
         background-color: #F2F2F2;
-        width: 50px;
-        height: 49px;
-        top: -70px;
+        width: 10%;
+        height: 50px;
+        top: -51px;
         left: 25px;
         border-bottom-left-radius: 15px;
         border-top-left-radius: 15px;
     }
-    .fa-location-dot /* icone du point localisation de la barre de recherche */
+    /* icone du point localisation de la
+    barre de recherche */
+    .fa-location-dot
     {
-        padding-left: 20px;
+        font-size: 20px;
+        padding-left: 15px;
         padding-top: 15px;
     }
-    #searchbar /* La barre de recherche */
+    /* La barre de recherche */
+    #searchbar
     {
         position: relative;
-        width: 200px;
-        top: -20px;
-        left: 75px;
+        width: 80%;
+        left: 55px;
         height: 50px;
         border: 2px solid;
         border-color: #F2F2F2;
     }
-    .search_zone
+    #searchbar::placeholder
     {
-        padding-top: 25px;
-        margin-bottom: -60px;
+        text-align: center;
+        font-size: 18px;
+        opacity: 1;
+        font-weight: 700;
     }
     .search_button
     {
         display: none;
     }
-    .search_button_mobile /* Le bouton de recherche */
+    /* Le bouton de recherche */
+    .search_button_mobile
     {
         position: relative;
         color: white;
         background-color: #0065FC;
         font-size: 15px;
-        width: 50px;
-        top: -20px;
-        left: 60px;
-        height: 50px;
+        width: 10%;
+        left: 20px;
+        height: 52px;
         border:0px;
         border-radius: 15px;
     }
@@ -105,17 +125,19 @@
     {
         background-color: #DEEBFF;
     }
-    .fa-info_circle /* cercle autour de l'icone i pour "info" */
+    /* cercle autour de l'icone i pour "info" */
+    .fa-info_circle
     {
         position: relative;
         height: 30px;
         width: 30px;
         border: 1px solid grey;
         border-radius: 60px;
-        left: 15px;
+        left: 30px;
         top: -57px;
     }
-    .fa-info /* l'icon petit i pour "info"*/
+    /* l'icon petit i pour "info"*/
+    .fa-info 
     {
         color: #0065FC;
         padding-left: 11px;
@@ -131,118 +153,148 @@
     .menu_filter
     {
         position: relative;
-        margin-left: auto;
-        margin-right: auto;
         display: flex;
         flex-wrap: wrap;
         list-style: none;
-        top: -55px;
-        left: 80px;
+        left: 25px;
     }
     .menu_filter li
     {
-        margin-right: 60px;
+        margin-right: 25px;
     }
     .filters
     {
         display: flex;
     }
+    /* Styles communs a tout les boutons filtres */
     .filter_style
     {
-        width: 200px;
-        height: 40px;
-        border: 2px solid grey;
+        height: 50px;
+        font-weight: 600;
+        border: 2px solid rgb(170, 170, 170);
         background-color: white;
         border-radius: 50px;
-        padding-left: 10px;
-        padding-top: 5px;
-    }
+    } 
     .filter_style:hover
     {
         background-color: var(--brand-lightblue);
     }
     .filter_style:focus
     {
+        color: white;
         background-color: var(--brand-blue);
     }
-    
+    /* Styles individuel des boutons filtres */
+    /* Bouton Économique */
+    .filter_button_1
+    {
+        text-align: right;
+        padding-right: 17px;
+        width: 160px;
+    }
+    /* Bouton Familial */
+    .filter_button_2
+    {
+        text-align: right;
+        padding-right: 15px;
+        width: 125px;
+    }
+    /* Bouton Romantique */
+    .filter_button_3
+    {
+        text-align: right;
+        padding-right: 10px;
+        width: 150px;
+    }
+    /* Bouton Animaux autorisés */
+    .filter_button_4
+    {
+        text-align: right;
+        padding-right: 10px;
+        width: 200px;
+    }
     /* Icone pour le filtre économique */
     .economic_icon
     {
         position: relative;
-        left: 0px;
-        top: -40px;
-        height: 40px;
-        width: 40px;
+        left: -10px;
+        top: -50px;
+        height: 50px;
+        width: 50px;
         border-radius: 50px;
         background-color: #DEEBFF;
     }
     .fa-money-bill-wave
     {
+        font-size: 20px;
         color: #0065FC;
-        padding-left: 12px;
-        padding-top: 12px;
+        padding-left: 13px;
+        padding-top: 13px;
     }
     /* Icone pour le filtre Familial */
     .family_icon
     {
         position: relative;
-        left: 0px;
-        top: -40px;
-        height: 40px;
-        width: 40px;
+        left: -10px;
+        top: -50px;
+        height: 50px;
+        width: 50px;
         border-radius: 50px;
         background-color: #DEEBFF;
     }
     .fa-child
     {
+        font-size: 20px;
         color: #0065FC;
-        padding-left: 12px;
-        padding-top: 12px;
+        padding-left: 18px;
+        padding-top: 14px;
     }
     /* Icone pour le filtre romantique */
     .romantic_icon
     {
         position: relative;
-        left: 0px;
-        top: -40px;
-        height: 40px;
-        width: 40px;
+        left: -10px;
+        top: -50px;
+        height: 50px;
+        width: 50px;
         border-radius: 50px;
         background-color: #DEEBFF;
     }
     .fa-heart
     {
+        font-size: 20px;
         color: #0065FC;
-        padding-left: 12px;
-        padding-top: 12px;
+        padding-left: 15px;
+        padding-top: 14px;
     }
 
     /* Icone pour le filtre animaux autorisées */
     .animals_icon
     {
         position: relative;
-        left: 0px;
-        top: -40px;
-        height: 40px;
-        width: 40px;
+        left: -10px;
+        top: -50px;
+        height: 50px;
+        width: 50px;
         border-radius: 50px;
         background-color: #DEEBFF;
     }
     .fa-dog
     {
+        font-size: 20px;
         color: #0065FC;
-        padding-left: 12px;
-        padding-top: 12px;
+        padding-left: 13px;
+        padding-top: 13px;
     }
     .search_result_numbers
     {
+        color: #545457;
         position: relative;
-        top: -5px;
+        top: 15px;
         font-size: 16px;
-        margin-left: 60px;
+        margin-left: 80px;
         margin-right: 20px;
-        font-weight: bold;
+        font-weight: 500;
     }
     .filters
     {
@@ -281,7 +333,7 @@
         border-radius: 25px;
         height: 200px;
         width: 378px;
-        box-shadow: 1px 1px 12px #555;
+        box-shadow: 0px 0px 5px grey;
         background-color: white;
         margin-bottom: 25px;
         margin-left: auto;
@@ -309,14 +361,14 @@
         position: relative;
         font-size: 14px;
         top: -20px;
-        left: 10px;
+        left: -10px;
     }
     .preview_marseille_activity_short, .preview_marseille_activity_long /* paramètres des cadres de resultats activité à marseille */
     {
         width: 378px;
         border-radius: 25px;
         height: 195px;
-        box-shadow: 1px 1px 12px #555;
+        box-shadow: 0px 0px 5px grey;
         background-color: white;
         margin-bottom: 25px;
         margin-left: auto;
@@ -367,15 +419,14 @@
     {
         position: relative;
         color: #0065FC;
-        left: 185px;
-        top: -110px;
-
+        left: 189px;
+        top: -165px;
     }
     .stars
     {
         position: relative;
         color: #0065FC;
-        top: -20px;
+        top: -50px;
         left: 20px;
     }
     .stargrey
@@ -387,7 +438,7 @@
         width: 378px;
         height: 160px;
         border-radius: 25px;
-        box-shadow: 1px 1px 12px #555;
+        box-shadow: 0px 0px 5px grey;
         background-color: white;
         margin-left: auto;
         margin-right: auto;
@@ -398,16 +449,16 @@
         position: relative;
         left: 190px;
         top: -150px;
-        font-size: small;
-        font-weight: bolder;
-        margin-right: 240px;
+        font-size: 18px;
+        font-weight: 700;
+        margin-right: 220px;
     }
     .preview_popular p
     {
         position: relative;
-        font-size: 13px;
-        left: 180px;
-        top: -150px;
+        font-size: 16px;
+        left: 159px;
+        top: -160px;
     }
     .preview_popular_image
     {
@@ -433,7 +484,7 @@
     .menu_footer
     {
         width: 100%;
-        height: 650px;
+        height: 530px;
         background-color: #F2F2F2;
         margin-top: 15px;
         padding-left: 50px;
@@ -441,13 +492,12 @@
     .footer_unordered_list
     {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
     .menu_footer ul li
     {
         list-style: none;
         margin-top: 20px;
-        margin-right: 400px;
     }
     .menu_footer ul li a
     {
@@ -456,8 +506,8 @@
     .menu_footer_lessbold
     {
         font-size: 16px;
-        color: #39393b;
-        font-weight: 500;
+        color: #545457;
+        font-weight: 600;
     }
     .menu_footer_bold
     {

@@ -123,106 +123,140 @@ main p
 .menu_filter
 {
     position: relative;
+    top: -75px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    top: -75px;
-    left: 60px;
+    left: 75px;
+    margin-right: 25px;
 }
 .menu_filter li
 {
-    margin-right: 60px;
+    margin-right: 25px;
 }
 .filters
 {
     display: flex;
 }
+/* Styles communs a tout les boutons filtres */
 .filter_style
-    {
-        width: 200px;
-        height: 40px;
-        border: 2px solid grey;
-        background-color: white;
-        border-radius: 50px;
-        padding-left: 10px;
-        padding-top: 5px;
-    }
+{
+    height: 50px;
+    font-weight: 600;
+    border: 2px solid rgb(170, 170, 170);
+    background-color: white;
+    border-radius: 50px;
+} 
 .filter_style:hover
 {
     background-color: var(--brand-lightblue);
 }
 .filter_style:focus
 {
+    color: white;
     background-color: var(--brand-blue);
+}
+/* Styles individuel des boutons filtres */
+/* Bouton Économique */
+.filter_button_1
+{
+    text-align: right;
+    padding-right: 17px;
+    width: 160px;
+}
+/* Bouton Familial */
+.filter_button_2
+{
+    text-align: right;
+    padding-right: 15px;
+    width: 125px;
+}
+/* Bouton Romantique */
+.filter_button_3
+{
+    text-align: right;
+    padding-right: 10px;
+    width: 150px;
+}
+/* Bouton Animaux autorisés */
+.filter_button_4
+{
+    text-align: right;
+    padding-right: 10px;
+    width: 200px;
 }
 /* Icone pour le filtre économique */
 .economic_icon
 {
     position: relative;
-    left: 0px;
-    top: -40px;
-    height: 40px;
-    width: 40px;
+    left: -10px;
+    top: -50px;
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
     background-color: #DEEBFF;
 }
 .fa-money-bill-wave
 {
+    font-size: 20px;
     color: #0065FC;
-    padding-left: 12px;
-    padding-top: 12px;
+    padding-left: 13px;
+    padding-top: 13px;
 }
 /* Icone pour le filtre Familial */
 .family_icon
 {
     position: relative;
-    left: 0px;
-    top: -40px;
-    height: 40px;
-    width: 40px;
+    left: -10px;
+    top: -50px;
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
     background-color: #DEEBFF;
 }
 .fa-child
 {
+    font-size: 20px;
     color: #0065FC;
-    padding-left: 12px;
-    padding-top: 12px;
+    padding-left: 18px;
+    padding-top: 14px;
 }
 /* Icone pour le filtre romantique */
 .romantic_icon
 {
     position: relative;
-    left: 0px;
-    top: -40px;
-    height: 40px;
-    width: 40px;
+    left: -10px;
+    top: -50px;
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
     background-color: #DEEBFF;
 }
 .fa-heart
 {
+    font-size: 20px;
     color: #0065FC;
-    padding-left: 12px;
-    padding-top: 12px;
+    padding-left: 15px;
+    padding-top: 14px;
 }
 
 /* Icone pour le filtre animaux autorisées */
 .animals_icon
 {
     position: relative;
-    left: 0px;
-    top: -40px;
-    height: 40px;
-    width: 40px;
+    left: -10px;
+    top: -50px;
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
     background-color: #DEEBFF;
 }
 .fa-dog
 {
+    font-size: 20px;
     color: #0065FC;
-    padding-left: 12px;
-    padding-top: 12px;
+    padding-left: 13px;
+    padding-top: 13px;
 }
 .filters
 {
@@ -281,15 +315,17 @@ main p
 
 }
 .preview h3
-{
-    font-size: 16px;
-    font-weight: bold;
+{   
+    position: relative;
+    top: -10px;
+    font-size: 18px;
+    font-weight: 700;
     padding-left: 20px;
 }
 .preview p
 {
-    font-size: 12px;
-    top: -10px;
+    font-size: 16px;
+    top: -23px;
 }
 .preview_image
 {
@@ -311,7 +347,7 @@ main p
 .stars
 {
     position: relative;
-    top: -14px;
+    top: -28px;
     left: 20px;
     color: #0065FC;
 }
@@ -324,7 +360,7 @@ main p
 {
     position: relative;
     color: #0065FC;
-    top: -110px;
+    top: -135px;
     left: 160px;
 }
 .preview_popular_list
@@ -354,17 +390,18 @@ main p
 .preview_popular h3
 {
     position: relative;
-    font-size: 14px;
-    margin-right: 200px;
-    top: -140px;
-    left: 175px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 190px;
+    top: -145px;
+    left: 160px;
 }
 .preview_popular p
 {
     position: relative;
-    font-size: 12px;
-    top: -145px;
-    left: 160px;
+    font-size: 16px;
+    top: -150px;
+    left: 145px;
 }
 .preview_popular_image
 {
