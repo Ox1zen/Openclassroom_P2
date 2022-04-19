@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Informations de la page -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booki</title>
+    <!-- importation des Feuilles de style -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- importation de la Police d'écriture -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f447644e11.js" crossorigin="anonymous"></script>
-    <title>Accueil</title>
 </head>
 <body>
     <header>
+        <!-- La partie haute du site allant du logo -->
         <section id="header_container">
             <img src="./assets/logo/Booki.png" alt="Logo de Booki" id="Booki_Logo" width="100">
             <nav class="menu">
@@ -27,8 +30,9 @@
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
         </header>
-        
+        <!-- Partie principale du site -->
         <main>
+            <!-- La barre de recherche -->
             <section class="search_zone">
                 <input type="search" name="mainsearchbar" id="searchbar" placeholder="Marseille, france">
                 <button class="search_button">Rechercher</button>
@@ -38,6 +42,7 @@
                 </section>
             </section>
             <p>Filtres</p>
+            <!-- Menu des différents filtres  -->
             <ul class="menu_filter">
                 <li>
                     <button class="filter_style">Économique</button>
@@ -54,22 +59,23 @@
                 <li>
                     <button class="filter_style">Animaux autorisés</button>
                     <section class="animals_icon"><i class="fa-solid fa-dog"></i></section>
-            </li>
-        </ul>
+                </li>
+            </ul>
         <p class="search_result_numbers">Plus de 500 logements sont disponibles dans cette ville</p>
         <section class="fa-info_circle">
             <i class="fa-solid fa-info"></i>
         </section>
+        <!-- Partie hébergement à marseille du site  -->
         <section class="filters">
             <section class="filter_hebergement_marseille">
                 <h2>Hébergements à Marseille</h2>
                 <section class="preview_list">
-                    <a class="cards-link" href="#">                            
-                        <div class="preview">
-                            <img src="./assets/images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="" class="preview_image">
+                    <a class="cards-link" href="#">  <!-- Contenu de la carte agissant en tant que lien -->                          
+                        <div class="preview"> <!-- Preview de L'article -->
+                            <img src="./assets/images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="" class="preview_image"> <!-- Image de la preview -->
                             <h3>Auberge La cannebière</h3>
                             <p>Nuit à partir de 25€</p>
-                            <section class="stars">
+                            <section class="stars"> <!-- section pour la note sur 5 étoiles, contenant les icones étoiles -->
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -153,12 +159,11 @@
                     <p class="show_more_marseille_host">Afficher plus</p>
                 </a>
             </section>
-
-            
+            <!-- Partie "Les plus populaire" du site -->
             <section class="filter_most_popular">
                 <section class="most_popular_title">
                     <h2>Les plus populaires</h2>
-                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <i class="fas fa-chart-line"></i>
                 </section>
                 <section class="preview_popular_list">
                     <a class="cards-link" href="#">                            
@@ -206,7 +211,7 @@
                 </section>
             </section>
 
-            
+            <!-- Partie " Activités à Marseille" du site -->
         </section>
         <section class="filter_marseille_activity">
                 <h2>Activités à Marseille</h2>
@@ -261,6 +266,7 @@
                 </section>
         </section>
     </main>
+    <!-- Menu Footer du site -->
     <div class="footer">
         <footer>
             <section class="menu_footer">

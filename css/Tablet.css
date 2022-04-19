@@ -284,7 +284,6 @@ main p
 {
     font-size: 16px;
     font-weight: bold;
-    /* text-align: center; */
     padding-left: 20px;
 }
 .preview p
@@ -333,7 +332,7 @@ main p
     display: flex;
     flex-wrap: wrap;
 }
-.fa-arrow-trend-up
+.fa-chart-line
 {
     color: black;
     position: relative;
@@ -403,15 +402,6 @@ main p
 {
     flex-direction: column;
 }
-/* .preview_marseille_activity_long
-{
-    width: 300px;
-    height: 450px;
-    border-radius: 15px;
-    margin-left: 25px;
-    background-color: white;
-    box-shadow: 0px 0px 5px grey;
-} */
 .preview_marseille_activity_long h3
 {
     position: relative;
@@ -441,16 +431,6 @@ main p
     flex-flow: wrap;
     flex-direction: column;
 }
-/* .preview_marseille_image
-{
-    position: relative;
-    height: 400px;
-    width: 300px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    top: -5px;
-    object-fit: cover;
-} */
 .preview_marseille_image_short,.preview_marseille_image_shortablet
 {
     position: relative;
@@ -474,41 +454,36 @@ main p
 /*---------------[FOOTER]---------------*/
 .menu_footer
 {
-    /* position: absolute; */
-    /* width: 100%; */
-    /* height: 300px; */
     background-color: #F2F2F2;
     margin-top: 30px;
-    padding-left: 50px;
+
 }
 .footer_unordered_list
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-left: -150px;
+    justify-content: space-between;
+
 }
 .menu_footer ul li
 {
     list-style: none;
     margin-top: 20px;
     display: flex;
-    /* margin-right: 200px; */
 }
 .menu_footer ul li a
 {
     text-decoration: none;
-    /* color: black; */
 }
 .menu_footer_lessbold
 {
     font-size: 16px;
     color: #39393b;
-    font-weight: bolder;
+    font-weight: 500;
 }
 .menu_footer_bold
 {
     color: black;
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 700;
 }
